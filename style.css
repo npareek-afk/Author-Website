@@ -372,3 +372,67 @@ footer {
 }
 
 .divider { border: 0; height: 1px; background: #eee; margin: 60px 0; }
+
+
+/* International 4-Column Layout */
+.international-box {
+    max-width: 1000px;
+    margin: 40px auto 0 auto;
+    padding: 40px;
+    background: #f8f9fa;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.international-box h4 {
+    margin-bottom: 30px;
+    color: var(--primary-color);
+    font-size: 0.9rem;
+}
+
+.geo-grid-four {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 Equal columns */
+    gap: 20px;
+}
+
+.geo-item {
+    display: flex;
+    flex-direction: column; /* Flag on top, Name below */
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    background: #fff;
+    padding: 15px;
+    border-radius: 6px;
+    border: 1px solid #eee;
+    transition: all 0.3s ease;
+}
+
+.geo-item:hover {
+    border-color: var(--accent-color);
+    transform: translateY(-3px);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+.flag-icon {
+    font-size: 1.8rem; /* Large, bold flag */
+    margin-bottom: 8px;
+}
+
+.country-name {
+    font-size: 0.8rem;
+    font-weight: 700;
+    font-family: 'Montserrat', sans-serif;
+    color: var(--primary-color);
+    text-transform: uppercase;
+}
+
+/* Responsive adjustments */
+@media (max-width: 900px) {
+    .geo-grid-four { grid-template-columns: repeat(2, 1fr); } /* 2 columns on tablets */
+}
+
+@media (max-width: 500px) {
+    .geo-grid-four { grid-template-columns: 1fr; } /* 1 column on mobile */
+}
