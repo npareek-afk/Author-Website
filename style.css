@@ -321,28 +321,38 @@ footer {
     padding-bottom: 5px;
 }
 
+/* Taming the Retailer Logos */
+.vendor-logo {
+    height: 18px;    /* Strictly limits the height */
+    width: auto;      /* Keeps the proportions correct */
+    max-width: 80px;  /* Ensures they don't grow too wide */
+    display: inline-block;
+    vertical-align: middle;
+}
+
 .store-link {
     display: flex;
     align-items: center;
-    gap: 15px;
-    padding: 12px;
-    margin-bottom: 10px;
+    gap: 12px;
+    padding: 10px 15px;
+    margin-bottom: 8px;
     text-decoration: none;
     color: var(--primary-color);
     background: #f9f9f9;
-    border-radius: 6px;
-    transition: 0.3s;
+    border: 1px solid #eee;
+    border-radius: 4px;
+    transition: all 0.2s ease;
+    font-size: 0.9rem; /* Smaller, cleaner text */
+}
+
+.store-link span {
     font-weight: 600;
 }
 
 .store-link:hover {
-    background: #f0f0f0;
-    transform: translateY(-2px);
-}
-
-.vendor-logo {
-    height: 20px;
-    width: auto;
+    background: #fff;
+    border-color: var(--accent-color);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
 }
 
 /* International 2-Column Layout */
