@@ -287,4 +287,95 @@ footer {
     .book-image img { width: 250px; }
 }
 
+/* Purchase Section Container */
+.purchase-section {
+    background: #fdfdfd;
+    padding: 80px 40px;
+    border: 1px solid #eee;
+    border-radius: 12px;
+    margin-top: 60px;
+}
+
+.store-grid {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-bottom: 50px;
+    flex-wrap: wrap;
+}
+
+.store-card {
+    flex: 1;
+    min-width: 300px;
+    background: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    text-align: left;
+}
+
+.store-card h4 {
+    border-bottom: 2px solid var(--accent-color);
+    display: inline-block;
+    margin-bottom: 20px;
+    padding-bottom: 5px;
+}
+
+.store-link {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 12px;
+    margin-bottom: 10px;
+    text-decoration: none;
+    color: var(--primary-color);
+    background: #f9f9f9;
+    border-radius: 6px;
+    transition: 0.3s;
+    font-weight: 600;
+}
+
+.store-link:hover {
+    background: #f0f0f0;
+    transform: translateY(-2px);
+}
+
+.vendor-logo {
+    height: 20px;
+    width: auto;
+}
+
+/* International 2-Column Layout */
+.international-box {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 30px;
+    background: #f8f9fa;
+    border-radius: 8px;
+}
+
+.geo-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.geo-col a {
+    display: block;
+    text-align: left;
+    text-decoration: none;
+    color: #555;
+    padding: 8px 0;
+    font-size: 0.95rem;
+    border-bottom: 1px inset #eee;
+}
+
+.geo-col a:hover {
+    color: var(--accent-color);
+}
+
+@media (max-width: 600px) {
+    .geo-grid { grid-template-columns: 1fr; }
+}
 
