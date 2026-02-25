@@ -278,3 +278,17 @@ footer {
 }
 
 .divider { border: 0; height: 1px; background: #eee; margin: 40px 0; }
+
+
+/* Tablet and Phone view */
+@media (max-width: 850px) {
+    .navbar { flex-direction: column; gap: 15px; padding: 20px; }
+    .hero-flex, .book-spotlight { flex-direction: column; text-align: center; align-items: center; }
+    .hero-image img, .book-image img { max-width: 280px; margin-bottom: 20px; box-shadow: 10px 10px 0px var(--accent-color); }
+    .geo-grid-four { grid-template-columns: repeat(2, 1fr); } /* 2 columns on mobile for better fit */
+}
+
+@media (max-width: 480px) {
+    .geo-grid-four { grid-template-columns: 1fr; } /* 1 column on very small phones */
+    .page-title { font-size: 1.8rem; }
+}
