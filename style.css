@@ -126,3 +126,47 @@ footer {
     .nav-links { display: none; } /* Simplification for now */
     .hero-image img { box-shadow: 10px 10px 0px var(--accent-color); }
 }
+
+
+
+/* About Page Specific Styles */
+.about-section {
+    padding: 60px 0;
+    max-width: 800px; /* Keeps text lines at a readable length */
+    margin: 0 auto;
+}
+
+.page-title {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-bottom: 5px;
+}
+
+.accent-text {
+    color: var(--accent-color);
+    font-size: 1.2rem;
+    margin-bottom: 40px;
+    font-style: italic;
+}
+
+.about-content p {
+    margin-bottom: 25px;
+    font-size: 1.1rem;
+    color: #444;
+}
+
+.lead-para {
+    font-size: 1.3rem !important;
+    font-weight: 500;
+    color: var(--primary-color) !important;
+}
+
+.bio-quote {
+    margin-top: 50px;
+    padding: 30px;
+    border-left: 4px solid var(--accent-color);
+    background-color: #f9f6f2;
+    font-style: italic;
+    font-size: 1.2rem;
+    color: var(--primary-color);
+}
