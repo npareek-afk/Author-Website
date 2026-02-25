@@ -170,3 +170,48 @@ footer {
     font-size: 1.2rem;
     color: var(--primary-color);
 }
+
+
+
+/* Container for the text and floating image */
+.about-content {
+    line-height: 1.8;
+}
+
+/* Small Image Box positioned to the left */
+.about-image-box {
+    float: left;
+    width: 200px; /* Small box size */
+    margin-right: 25px; /* Space between image and text */
+    margin-bottom: 10px; /* Space before text wraps underneath */
+}
+
+.about-image-box img {
+    width: 100%;
+    height: auto;
+    border: 1px solid #ddd;
+    padding: 5px; /* Creates a small frame effect */
+    background: #fff;
+}
+
+/* Ensures the quote doesn't get tangled in the float */
+.bio-quote {
+    clear: both; 
+    margin-top: 40px;
+    padding: 20px;
+    border-left: 4px solid var(--accent-color);
+    background-color: #f9f6f2;
+    font-style: italic;
+}
+
+/* Mobile: Stack them instead of floating */
+@media (max-width: 600px) {
+    .about-image-box {
+        float: none;
+        margin: 0 auto 20px auto;
+        display: block;
+        width: 100%;
+        max-width: 250px;
+    }
+}
+
