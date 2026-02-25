@@ -328,6 +328,7 @@ footer {
     max-width: 80px;  /* Ensures they don't grow too wide */
     display: inline-block;
     vertical-align: middle;
+    filter: grayscale(100%); opacity: 0.7;
 }
 
 .store-link {
@@ -353,6 +354,10 @@ footer {
     background: #fff;
     border-color: var(--accent-color);
     box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    }
+
+.store-link:hover .vendor-logo { 
+    filter: grayscale(0%); opacity: 1; 
 }
 
 /* International 2-Column Layout */
