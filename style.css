@@ -490,3 +490,34 @@ footer {
 @media (max-width: 450px) {
     .geo-grid-four { grid-template-columns: 1fr; }
 }
+
+
+/* Container for the Two Columns */
+.geo-flex-container {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+/* Each Column takes up 50% width */
+.geo-column {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Specific styling for the flag inside the store-link */
+.flag-emoji {
+    font-size: 1.4rem;
+    font-weight: bold;
+    display: inline-block;
+}
+
+/* Responsive: Stack columns on top of each other on mobile */
+@media (max-width: 700px) {
+    .geo-flex-container {
+        flex-direction: column;
+        gap: 0;
+    }
+}
