@@ -436,3 +436,57 @@ footer {
 @media (max-width: 500px) {
     .geo-grid-four { grid-template-columns: 1fr; } /* 1 column on mobile */
 }
+
+/* This container forces the 4-column layout */
+.geo-grid-four {
+    display: grid !important; 
+    grid-template-columns: repeat(4, 1fr); /* Forces 4 columns */
+    gap: 15px;
+    margin-top: 30px;
+}
+
+/* This styles each individual country box */
+.geo-item {
+    display: flex !important;
+    flex-direction: column; /* Puts flag on top of text */
+    align-items: center;
+    justify-content: center;
+    background: #ffffff;
+    border: 1px solid #eaeaea;
+    padding: 20px 10px;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+
+.geo-item:hover {
+    border-color: var(--accent-color);
+    background-color: #fffaf5;
+    transform: translateY(-3px);
+}
+
+/* This makes the flags large and bold */
+.flag-icon {
+    font-size: 2rem; 
+    display: block;
+    margin-bottom: 8px;
+}
+
+.country-name {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 0.75rem;
+    color: var(--primary-color);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Tablet: 2 columns */
+@media (max-width: 800px) {
+    .geo-grid-four { grid-template-columns: repeat(2, 1fr); }
+}
+
+/* Mobile: 1 column */
+@media (max-width: 450px) {
+    .geo-grid-four { grid-template-columns: 1fr; }
+}
