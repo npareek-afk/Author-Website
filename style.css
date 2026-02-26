@@ -79,51 +79,53 @@ footer {
 }
 
 /* =========================================
-   3. REFINED MASONRY GALLERY (NO CUTTING)
+   3. REFINED MASONRY GALLERY (CENTER-BALANCED)
    ========================================= */
 .gallery-grid {
-    /* Squeezes columns together for a tighter look */
-    max-width: 950px; 
+    max-width: 1000px; /* Wider container to allow breathing room */
     margin: 40px auto;
-    
-    /* Creates the Masonry columns */
-    column-count: 3; 
-    column-gap: 20px; /* Space between columns */
+    column-count: 3;
+    column-gap: 30px; /* Space between columns */
 }
 
 .gallery-item {
-    display: inline-block; /* Essential for Masonry flow */
+    display: flex; 
+    flex-direction: column;
+    align-items: center; /* Centers image horizontally in column */
+    justify-content: center; /* Centers image vertically relative to its gap */
     width: 100%;
-    margin-bottom: 20px; /* Space between stacked images */
-    break-inside: avoid; /* Prevents image splitting */
-    
-    /* Centering logic */
+    margin-bottom: 35px; /* Consistent vertical spacing */
+    break-inside: avoid;
     text-align: center;
 }
 
 .gallery-item img {
-    width: 100%;
-    height: auto; /* Respects original proportions perfectly */
+    width: 90%; /* Makes image slightly smaller for a "framed" look */
+    height: auto;
     display: block;
-    border-radius: 6px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin: 0 auto; /* Ensures it stays dead-center */
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05); /* Softer shadow for balance */
+    transition: all 0.3s ease;
     cursor: pointer;
 }
 
 .gallery-item img:hover {
-    transform: translateY(-5px); /* Lift effect */
-    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    width: 95%; /* Subtle growth effect */
+    transform: translateY(-5px);
+    box-shadow: 0 12px 25px rgba(0,0,0,0.1);
 }
 
 /* Mobile Responsiveness */
 @media (max-width: 850px) {
-    .gallery-grid { column-count: 2; }
+    .gallery-grid { column-count: 2; column-gap: 20px; }
+    .gallery-item img { width: 95%; } /* Fill more space on smaller screens */
 }
 
 @media (max-width: 500px) {
     .gallery-grid { column-count: 1; }
+    .gallery-item { margin-bottom: 25px; }
 }
-
 
 /* =========================================
    4. ARTICLES & MEDIA SECTION
