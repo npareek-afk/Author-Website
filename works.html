@@ -3,171 +3,47 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Published Work | Nitin Pareek</title>
-    <link rel="stylesheet" href="style.css">
+    <title>My Book | Nitin Pareek</title>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="header.js" defer></script>
 </head>
 <body>
 
-    <nav class="navbar">
-        <div class="logo">NP</div>
-        <ul class="nav-links">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="works.html">Published Work</a></li>
-            <li><a href="upcoming.html">Coming Soon</a></li>
-        </ul>
-    </nav>
-
     <main class="container">
-        <section class="book-spotlight">
-            <div class="book-image">
-                <img src="book-cover.jpg" alt="Journey Through AI Land Book Cover">
+        <section class="book-display" style="padding: 60px 0;">
+            <div class="hero-image">
+                <img src="photos/book-cover.jpg" alt="Journey Through AI Land" class="book-main-img">
             </div>
-            <div class="book-details">
-                <h1>Journey Through AI Land</h1>
-                <p class="tagline">A friendly way to understand AI with ease.</p>
-                <p>A lot of people wish that someone could explain AI in a simple, friendly way, without the tech overwhelm. This book is a story-led introduction to the core building blocks of AI, written for anyone who wants clarity without complexity.</p>
-                <p>Join <strong>Kishi</strong>, your virtual travel buddy, as we explore Data, Learning, LLMs, Prompts, and Agentic AI through relatable stories and simple analogies.</p>
+
+            <div class="hero-content">
+                <h1 class="page-title">Journey Through AI Land</h1>
+                <p class="credentials">Author | Ph.D. Scholar | IT Professional</p>
                 
-                <ul class="key-learnings">
-                    <li>How AI learns patterns and improves like humans</li>
-                    <li>What powers tools like ChatGPT, Gemini, and DALL-E</li>
-                    <li>Why prompts matter — and how to write better ones</li>
-                    <li>Why Agentic AI is the next leap after Generative AI</li>
-                </ul>
-                <a href="#buy" class="btn">Find Your Copy</a>
-            </div>
-        </section>
+                <div class="book-description">
+                    <p>In a world rapidly transformed by algorithms, <em>Journey Through AI Land</em> serves as both a guide and a narrative exploration. This book demystifies complex AI concepts through engaging storytelling, making the future of technology accessible to everyone.</p>
+                    
+                    <blockquote class="review-quote-short">
+                        "A visionary take on our AI future... manages to make complex neural networks feel like a walk in the park."
+                        <cite>— Recent Book Review</cite>
+                    </blockquote>
+                </div>
 
-        <hr class="divider">
-
-        <section class="reviews">
-            <h2 class="section-title">What Readers are Saying</h2>
-            <div class="reviews-grid">
-                <div class="review-card">
-                    <h3>"A cohesive and story driven overview"</h3>
-                    <p>Presented the concepts clearly and put everything into perspective. Effectively covers AI end to end.</p>
-                    <span class="reviewer">— Amit K, Sr IT Professional</span>
-                </div>
-                <div class="review-card">
-                    <h3>"Practical Overview of AI Landscape"</h3>
-                    <p>A brilliant book written in a clear style. Guides readers through the maze of the AI technology stack.</p>
-                    <span class="reviewer">— Punit T, Sr Leader in IT (UK)</span>
-                </div>
-                <div class="review-card">
-                    <h3>"Nice to learn AI fundamentals"</h3>
-                    <p>Well-structured, gradually introducing advanced topics without overwhelming the reader.</p>
-                    <span class="reviewer">— Ankush D, Sr Architect</span>
-                </div>
-                <div class="review-card">
-                    <h3>"Amazing Book"</h3>
-                    <p>Kishi's journey engages you and helps understanding the AI usage. It is a must read.</p>
-                    <span class="reviewer">— Verified Pre-Launch Reader (Class 9th Student)</span>
+                <h3 style="margin-top: 30px; font-size: 0.9rem; color: #666;">Available On:</h3>
+                <div class="store-grid">
+                    <a href="YOUR_AMAZON_LINK" target="_blank" class="store-link">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg" alt="Buy on Amazon">
+                    </a>
+                    <a href="YOUR_GOOGLE_LINK" target="_blank" class="store-link">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/7/7a/Google_Play_2022_logo.svg" alt="Get it on Google Books" style="height: 30px;">
+                    </a>
                 </div>
             </div>
         </section>
-
-  <section id="buy" class="purchase-section">
-        <h2 class="section-title">Bring the Journey Home</h2>
-        <p class="purchase-intro">Available in Print and Digital formats globally.</p>
-        
-        <div class="store-grid">
-            <div class="store-card">
-                <h4>Global & Digital</h4>
-                <div class="store-icons">
-                    <a href="https://mybook.to/JourneythroughAiland" target="_blank" rel="noopener" class="store-link">
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg" alt="Amazon" class="vendor-logo">
-                        <span>Universal Link</span>
-                    </a>
-                    <a href="https://play.google.com/store/books/details?id=z7u9EQAAQBAJ" target="_blank" rel="noopener" class="store-link">
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/d/d0/Google_Play_Arrow_logo.svg" alt="Google Play" class="vendor-logo">
-                        <span>Google Books</span>
-                    </a>
-                    <a href="https://www.kobo.com/in/en/ebook/journey-through-ai-land-1" target="_blank" rel="noopener" class="store-link">
-                        <span class="book-emoji">📖</span>
-                        <span>Kobo eBook</span>
-                    </a>
-                </div>
-            </div>
-    
-            <div class="store-card">
-                <h4>Available in India</h4>
-                <div class="store-icons">
-                    <a href="https://amzn.in/d/009X6bLG" target="_blank" rel="noopener" class="store-link">
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg" alt="Amazon India" class="vendor-logo">
-                        <span>Amazon India</span>
-                    </a>
-                    <a href="https://shop.storymirror.com/Journey-Through-AI-Land/p/1xh60cj2fys8mk81q8rh" target="_blank" rel="noopener" class="store-link">
-                        <span class="book-emoji">✍️</span>
-                        <span>StoryMirror Shop</span>
-                    </a>
-                    <a href="https://www.flipkart.com/product/p/itme?pid=9789360709235" target="_blank" rel="noopener" class="store-link">
-                        <span class="book-emoji">🛒</span>
-                        <span>Flipkart</span>
-                    </a>
-                </div>
-            </div>
-        </div>
-    
-        <div class="international-box">
-            <h4>International Amazon Stores</h4>
-            <div class="geo-grid-four">
-                <a href="https://a.co/d/09c9T19I" target="_blank" rel="noopener" class="geo-item">
-                    <span class="flag-icon" style="font-weight: bold;">US</span>
-                    <span class="country-name">USA</span>
-                </a>
-                <a href="https://amzn.eu/d/0icldmHI" target="_blank" rel="noopener" class="geo-item">
-                    <span class="flag-icon" style="font-weight: bold;">UK</span>
-                    <span class="country-name">UK</span>
-                </a>
-                <a href="https://amzn.eu/d/0gGePnea" target="_blank" rel="noopener" class="geo-item">
-                    <span class="flag-icon" style="font-weight: bold;">DE</span>
-                    <span class="country-name">Germany</span>
-                </a>
-                <a href="https://a.co/d/000kcFFv" target="_blank" rel="noopener" class="geo-item">
-                    <span class="flag-icon" style="font-weight: bold;">CA</span>
-                    <span class="country-name">Canada</span>
-                </a>
-                <a href="https://amzn.asia/d/0fQCSBMP" target="_blank" rel="noopener" class="geo-item">
-                    <span class="flag-icon" style="font-weight: bold;">AU</span>
-                    <span class="country-name">Australia</span>
-                </a>
-                <a href="https://amzn.asia/d/01x29M27" target="_blank" rel="noopener" class="geo-item">
-                    <span class="flag-icon" style="font-weight: bold;">JP</span>
-                    <span class="country-name">Japan</span>
-                </a>
-                <a href="https://amzn.eu/d/0icjhynU" target="_blank" rel="noopener" class="geo-item">
-                    <span class="flag-icon" style="font-weight: bold;">FR</span>
-                    <span class="country-name">France</span>
-                </a>
-                <a href="https://amzn.eu/d/02Rr3KaB" target="_blank" rel="noopener" class="geo-item">
-                    <span class="flag-icon" style="font-weight: bold;">ES</span>
-                    <span class="country-name">Spain</span>
-                </a>
-                <a href="https://amzn.eu/d/0gpHvgNz" target="_blank" rel="noopener" class="geo-item">
-                    <span class="flag-icon" style="font-weight: bold;">IT</span>
-                    <span class="country-name">Italy</span>
-                </a>
-                <a href="https://amzn.eu/d/05l4WeXS" target="_blank" rel="noopener" class="geo-item">
-                    <span class="flag-icon" style="font-weight: bold;">NL</span>
-                    <span class="country-name">Netherlands</span>
-                </a>
-                <a href="https://amzn.eu/d/0hBWGBJD" target="_blank" rel="noopener" class="geo-item">
-                    <span class="flag-icon" style="font-weight: bold;">PL</span>
-                    <span class="country-name">Poland</span>
-                </a>
-                <a href="https://amzn.eu/d/07zmaghg" target="_blank" rel="noopener" class="geo-item">
-                    <span class="flag-icon" style="font-weight: bold;">SE</span>
-                    <span class="country-name">Sweden</span>
-                </a>
-            </div>
-        </div>
-    </section>
     </main>
 
     <footer>
-        <p>&copy; 2026 Nitin Pareek. Built with care.</p>
+        <p style="text-align: center; padding: 40px 0; font-size: 0.8rem; color: #888;">&copy; 2026 Nitin Pareek</p>
     </footer>
 
 </body>
