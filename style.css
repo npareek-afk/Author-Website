@@ -79,50 +79,49 @@ footer {
 }
 
 /* =========================================
-   3. ELEGANT CENTERED GALLERY GRID
+   3. REFINED MASONRY GALLERY (NO CUTTING)
    ========================================= */
-
 .gallery-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr); 
-    gap: 15px; /* Tight gap between images */
-    margin: 40px auto; /* Centers the grid and adds top/bottom spacing */
-    max-width: 900px; /* Squeezes columns closer together */
+    /* Squeezes columns together for a tighter look */
+    max-width: 950px; 
+    margin: 40px auto;
+    
+    /* Creates the Masonry columns */
+    column-count: 3; 
+    column-gap: 20px; /* Space between columns */
 }
 
 .gallery-item {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 250px; /* Consistent height for row alignment */
-    overflow: hidden;
+    display: inline-block; /* Essential for Masonry flow */
+    width: 100%;
+    margin-bottom: 20px; /* Space between stacked images */
+    break-inside: avoid; /* Prevents image splitting */
+    
+    /* Centering logic */
+    text-align: center;
 }
 
 .gallery-item img {
-    max-width: 100%;
-    max-height: 100%;
-    width: auto;
-    height: auto;
-    object-fit: contain; /* Shows the FULL image, no cutting */
-    border-radius: 4px;
+    width: 100%;
+    height: auto; /* Respects original proportions perfectly */
+    display: block;
+    border-radius: 6px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     cursor: pointer;
 }
 
 .gallery-item img:hover {
-    transform: scale(1.05);
-    /* Subtle shadow on hover to make it feel interactive */
+    transform: translateY(-5px); /* Lift effect */
     box-shadow: 0 10px 20px rgba(0,0,0,0.1);
 }
 
-/* Responsive: 2 columns for tablets, 1 for mobile */
+/* Mobile Responsiveness */
 @media (max-width: 850px) {
-    .gallery-grid { grid-template-columns: repeat(2, 1fr); }
-    .gallery-item { height: 250px; }
+    .gallery-grid { column-count: 2; }
 }
 
 @media (max-width: 500px) {
-    .gallery-grid { grid-template-columns: 1fr; }
+    .gallery-grid { column-count: 1; }
 }
 
 
