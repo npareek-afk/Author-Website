@@ -1,45 +1,149 @@
-<main class="container">
-    <section class="about-section">
-        <h1 class="page-title">Gallery</h1>
-        <p class="accent-text">Moments from the Journey</p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery | Nitin Pareek</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Lightbox Specific Styles */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 9999;
+            padding-top: 50px;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.9);
+            cursor: pointer;
+        }
+        .modal-content {
+            margin: auto;
+            display: block;
+            width: auto;
+            max-width: 90%;
+            max-height: 80vh;
+            border: 3px solid #fff;
+            border-radius: 4px;
+            box-shadow: 0 0 20px rgba(0,0,0,0.5);
+        }
+        .close {
+            position: absolute;
+            top: 20px;
+            right: 35px;
+            color: #fff;
+            font-size: 40px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+        .close:hover { color: var(--accent-color); }
+        
+        /* Animation */
+        .modal-content { animation: zoom 0.3s; }
+        @keyframes zoom {
+            from {transform:scale(0.8); opacity:0} 
+            to {transform:scale(1); opacity:1}
+        }
+    </style>
+</head>
+<body>
 
-        <div class="gallery-grid">
-            <div class="gallery-item">
-                <img src="photos/1.jpg" alt="Journey Through AI Land Gallery 1">
+    <nav class="navbar">
+        <div class="logo">NP</div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="works.html">Published Work</a></li>
+            <li><a href="articles.html">Articles</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="upcoming.html">Upcoming</a></li>
+            <li><a href="connect.html">Connect</a></li>
+        </ul>
+    </nav>
+
+    <main class="container">
+        <section class="about-section">
+            <h1 class="page-title">Gallery</h1>
+            <p class="accent-text">Moments from the World Book Fair and the author's journey.</p>
+
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="photos/1.jpg" alt="Journey Through AI Land - World Book Fair">
+                </div>
+                <div class="gallery-item">
+                    <img src="photos/2.jpg" alt="Journey Through AI Land - Showcase">
+                </div>
+                <div class="gallery-item">
+                    <img src="photos/3.jpg" alt="Author Interaction">
+                </div>
+                <div class="gallery-item">
+                    <img src="photos/4.jpg" alt="Book Fair Highlights">
+                </div>
+                <div class="gallery-item">
+                    <img src="photos/5.jpg" alt="Readers at the Stall">
+                </div>
+                <div class="gallery-item">
+                    <img src="photos/6.jpg" alt="AI Land Discussion">
+                </div>
+                <div class="gallery-item">
+                    <img src="photos/7.jpg" alt="Event Photo 7">
+                </div>
+                <div class="gallery-item">
+                    <img src="photos/8.jpg" alt="Event Photo 8">
+                </div>
+                <div class="gallery-item">
+                    <img src="photos/9.jpg" alt="Event Photo 9">
+                </div>
+                <div class="gallery-item">
+                    <img src="photos/10.jpg" alt="Event Photo 10">
+                </div>
+                <div class="gallery-item">
+                    <img src="photos/11.jpg" alt="Event Photo 11">
+                </div>
+                <div class="gallery-item">
+                    <img src="photos/12.jpg" alt="Event Photo 12">
+                </div>
             </div>
-            <div class="gallery-item">
-                <img src="photos/2.jpg" alt="Journey Through AI Land Gallery 2">
-            </div>
-            <div class="gallery-item">
-                <img src="photos/3.jpg" alt="Journey Through AI Land Gallery 3">
-            </div>
-            <div class="gallery-item">
-                <img src="photos/4.jpg" alt="Journey Through AI Land Gallery 4">
-            </div>
-            <div class="gallery-item">
-                <img src="photos/5.jpg" alt="Journey Through AI Land Gallery 5">
-            </div>
-            <div class="gallery-item">
-                <img src="photos/6.jpg" alt="Journey Through AI Land Gallery 6">
-            </div>
-            <div class="gallery-item">
-                <img src="photos/7.jpg" alt="Journey Through AI Land Gallery 7">
-            </div>
-            <div class="gallery-item">
-                <img src="photos/8.jpg" alt="Journey Through AI Land Gallery 8">
-            </div>
-            <div class="gallery-item">
-                <img src="photos/9.jpg" alt="Journey Through AI Land Gallery 9">
-            </div>
-            <div class="gallery-item">
-                <img src="photos/10.jpg" alt="Journey Through AI Land Gallery 10">
-            </div>
-            <div class="gallery-item">
-                <img src="photos/11.jpg" alt="Journey Through AI Land Gallery 11">
-            </div>
-            <div class="gallery-item">
-                <img src="photos/12.jpg" alt="Journey Through AI Land Gallery 12">
-            </div>
-        </div>
-    </section>
-</main>
+        </section>
+    </main>
+
+    <div id="imageModal" class="modal">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="fullImage">
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Nitin Pareek. Built with care.</p>
+    </footer>
+
+    <script>
+        const modal = document.getElementById("imageModal");
+        const modalImg = document.getElementById("fullImage");
+        const span = document.getElementsByClassName("close")[0];
+
+        // Open modal on image click
+        document.querySelectorAll('.gallery-item img').forEach(image => {
+            image.onclick = function() {
+                modal.style.display = "block";
+                modalImg.src = this.src;
+            }
+        });
+
+        // Close modal when clicking (X)
+        span.onclick = function() {
+            modal.style.display = "none";
+        }
+
+        // Close modal when clicking outside the image
+        modal.onclick = function(event) {
+            if (event.target !== modalImg) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
+
+</body>
+</html>
