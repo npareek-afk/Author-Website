@@ -292,3 +292,48 @@ footer {
     .geo-grid-four { grid-template-columns: 1fr; } /* 1 column on very small phones */
     .page-title { font-size: 1.8rem; }
 }
+
+
+/* Upcoming Page Styles */
+.upcoming-content {
+    padding: 60px 0;
+    max-width: 850px;
+    margin: 0 auto;
+}
+
+.book-teaser-box {
+    background: #fdfdfd;
+    padding: 40px;
+    border: 1px dashed var(--accent-color); /* Dashed border signifies 'in progress' */
+    border-radius: 8px;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.working-title {
+    font-size: 1.8rem;
+    color: var(--primary-color);
+    margin-bottom: 10px;
+    text-transform: none; /* Keeps it readable */
+}
+
+.label-small {
+    font-size: 0.8rem;
+    font-style: italic;
+    color: #888;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.synopsis-container h3 {
+    color: var(--accent-color);
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 10px;
+}
+
+.synopsis-container p {
+    margin-bottom: 20px;
+    font-size: 1.1rem;
+    color: #444;
+}
