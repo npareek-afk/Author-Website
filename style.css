@@ -79,52 +79,50 @@ footer {
 }
 
 /* =========================================
-   3. REFINED MASONRY GALLERY (CENTER-BALANCED)
+   3. FINAL GALLERY: 3-COLUMN CENTERED GRID
    ========================================= */
 .gallery-grid {
-    max-width: 1000px; /* Wider container to allow breathing room */
+    display: grid;
+    /* Forces exactly 3 columns (Table style) */
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 30px; 
+    max-width: 1000px;
     margin: 40px auto;
-    column-count: 3;
-    column-gap: 30px; /* Space between columns */
 }
 
 .gallery-item {
-    display: flex; 
-    flex-direction: column;
-    align-items: center; /* Centers image horizontally in column */
-    justify-content: center; /* Centers image vertically relative to its gap */
-    width: 100%;
-    margin-bottom: 35px; /* Consistent vertical spacing */
-    break-inside: avoid;
-    text-align: center;
+    display: flex;
+    justify-content: center; /* Centers image horizontally */
+    align-items: center;     /* Centers image vertically */
+    height: 350px;           /* Fixed height for all rows to stay straight */
+    background-color: transparent; /* Clean look */
+    overflow: hidden;
 }
 
 .gallery-item img {
-    width: 90%; /* Makes image slightly smaller for a "framed" look */
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;
     height: auto;
-    display: block;
-    margin: 0 auto; /* Ensures it stays dead-center */
-    border-radius: 8px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.05); /* Softer shadow for balance */
-    transition: all 0.3s ease;
-    cursor: pointer;
+    object-fit: contain;     /* FULL image visible, NO cutting */
+    border-radius: 6px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    transition: transform 0.3s ease;
 }
 
 .gallery-item img:hover {
-    width: 95%; /* Subtle growth effect */
-    transform: translateY(-5px);
-    box-shadow: 0 12px 25px rgba(0,0,0,0.1);
+    transform: scale(1.03);
 }
 
-/* Mobile Responsiveness */
-@media (max-width: 850px) {
-    .gallery-grid { column-count: 2; column-gap: 20px; }
-    .gallery-item img { width: 95%; } /* Fill more space on smaller screens */
+/* Mobile Adjustments */
+@media (max-width: 900px) {
+    .gallery-grid { grid-template-columns: repeat(2, 1fr); }
+    .gallery-item { height: 300px; }
 }
 
 @media (max-width: 500px) {
-    .gallery-grid { column-count: 1; }
-    .gallery-item { margin-bottom: 25px; }
+    .gallery-grid { grid-template-columns: 1fr; }
+    .gallery-item { height: auto; min-height: 250px; }
 }
 
 /* =========================================
