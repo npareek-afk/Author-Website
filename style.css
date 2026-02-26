@@ -262,3 +262,37 @@ h1, h2, h3, .logo, .nav-links, .btn-primary {
 @media (max-width: 768px) {
     .reviews-grid { grid-template-columns: 1fr; }
 }
+
+
+.review-box {
+    background: #fdfdfd;
+    padding: 25px;
+    border: 1px solid #f0f0f0;
+    font-size: 0.95rem;
+    font-style: italic;
+    line-height: 1.5;
+    text-align: center;
+    border-radius: 4px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.02);
+}
+
+.review-box span {
+    display: block;
+    margin-top: 15px;
+    font-style: normal;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 0.75rem;
+    color: var(--accent-color);
+    text-transform: uppercase;
+}
+
+/* Responsive Grid for Reviews */
+@media (max-width: 900px) {
+    .reviews-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 600px) {
+    .reviews-grid { grid-template-columns: 1fr; }
+    .store-flex { gap: 20px; }
+}
