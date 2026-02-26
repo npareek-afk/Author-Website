@@ -83,19 +83,17 @@ footer {
    ========================================= */
 .gallery-grid {
     display: grid;
-    /* Keeps a strict 3-column layout on desktop */
     grid-template-columns: repeat(3, 1fr); 
-    gap: 30px;
-    margin-top: 40px;
-    align-items: center; /* Centers images vertically in the row */
+    gap: 10px; /* Reduced from 300px to 10px for tighter spacing */
+    margin-top: 20px;
 }
 
 .gallery-item {
     display: flex;
-    justify-content: center; /* Centers images horizontally */
+    justify-content: center;
     align-items: center;
-    padding: 20px; /* This makes the images look smaller/gives breathing room */
-    height: 300px; /* Ensures every row is perfectly aligned */
+    padding: 5px; /* Less internal padding */
+    height: 250px; /* Lower height to pull rows closer together */
 }
 
 .gallery-item img {
