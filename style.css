@@ -405,3 +405,40 @@ footer {
     width: 100%;
   }
 }
+
+
+/* the next set is code for image gallery - shwoing all images*/
+/* 1. Change Grid to Columns */
+.gallery-grid {
+    column-count: 3; /* 3 columns on desktop */
+    column-gap: 15px;
+    margin-top: 40px;
+}
+
+/* 2. Adjust the items to stack */
+.gallery-item {
+    display: inline-block; /* Essential for masonry */
+    width: 100%;
+    margin-bottom: 15px;
+    break-inside: avoid; /* Prevents image from splitting across columns */
+}
+
+.gallery-item img {
+    width: 100%;
+    height: auto; /* Let the height be natural */
+    display: block;
+    border-radius: 4px;
+    object-fit: normal; /* No more cropping */
+    transition: transform 0.3s ease;
+}
+
+/* 3. Responsive: 2 columns on tablets, 1 on phones */
+@media (max-width: 850px) {
+    .gallery-grid { column-count: 2; }
+}
+
+@media (max-width: 480px) {
+    .gallery-grid { column-count: 1; }
+}
+
+/* the above set is code for image gallery - shwoing all images*/
