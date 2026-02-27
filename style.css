@@ -27,10 +27,19 @@ body {
     overflow-x: hidden;
 }
 
-h1, h2, h3, .logo, .nav-links, .btn-primary {
+/* CHANGE HERE: Removed Uppercase from Headings */
+h1, h2, h3 {
     font-family: 'Montserrat', sans-serif;
-    text-transform: uppercase;
+    text-transform: none; /* Allows Initial Caps from your HTML */
+    letter-spacing: 0.5px;
+}
+
+/* Kept Uppercase for Navigation and Buttons for visual strength */
+.logo, .nav-links a, .btn-primary, .universal-btn, .connect-btn {
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase; 
     letter-spacing: 1px;
+    font-weight: 700;
 }
 
 .container {
@@ -38,6 +47,8 @@ h1, h2, h3, .logo, .nav-links, .btn-primary {
     margin: 0 auto;
     padding: 0 20px;
 }
+
+
 
 /* =========================================
    2. GLOBAL HAMBURGER NAV (Works with header.js)
@@ -572,4 +583,33 @@ h1, h2, h3, .logo, .nav-links, .btn-primary {
     /*.reviews-grid { grid-template-columns: repeat(2, 1fr); }*/
     .reviews-grid { grid-template-columns: 1fr; }
     .review-box[style*="span 2"] { grid-column: span 1 !important; }
+}
+
+
+/* =========================================
+   8. FINAL TYPOGRAPHY OVERRIDES
+   ========================================= */
+
+/* This stops the "shouting" on specific items */
+.page-title, 
+.article-card h3, 
+.article-card h3 a,
+.sub-title-item, 
+.section-heading {
+    text-transform: none !important; 
+    letter-spacing: normal;
+}
+
+/* Ensures category tags and the upcoming book status also use soft caps */
+.category, .status-tag {
+    text-transform: none !important;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+/* Ensures bracketed text remains subtle */
+.bracket-text {
+    text-transform: none !important;
+    font-weight: 400;
+    color: #a0aec0;
 }
