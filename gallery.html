@@ -6,23 +6,24 @@
     <title>Gallery | Nitin Pareek</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <script src="header.js" defer></script>
     <style>
         /* Lightbox Modal Styles */
         .modal {
             display: none;
             position: fixed;
             z-index: 9999;
-            padding-top: 50px;
             left: 0;
             top: 0;
             width: 100%;
             height: 100%;
-            background-color: rgba(0,0,0,0.95);
+            background-color: rgba(0,0,0,0.9);
             cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
         .modal-content {
-            margin: auto;
-            display: block;
             max-width: 90%;
             max-height: 85vh;
             border-radius: 4px;
@@ -44,48 +45,35 @@
 </head>
 <body>
 
-    <nav class="navbar">
-        <div class="logo">NP</div>
-        <ul class="nav-links">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="works.html">Published Work</a></li>
-            <li><a href="articles.html">Articles</a></li>
-            <li><a href="gallery.html">Gallery</a></li>
-            <li><a href="upcoming.html">Upcoming</a></li>
-            <li><a href="connect.html">Connect</a></li>
-        </ul>
-    </nav>
-
     <main class="container">
-        <section class="about-section">
+        <section class="gallery-section" style="padding: 60px 0;">
             <h1 class="page-title">Gallery</h1>
-            <p class="accent-text">Moments from the World Book Fair and the journey through AI Land.</p>
+            <p class="accent-text" style="text-align: center; margin-bottom: 40px; color: #666;">Moments from the World Book Fair and the journey through AI Land.</p>
     
             <div class="gallery-grid">
-                <div class="gallery-item"><img src="photos/1.jpg" alt="World Book Fair 2026 Showcase"></div>
-                <div class="gallery-item"><img src="photos/2.jpg" alt="Journey Through AI Land Presentation"></div>
-                <div class="gallery-item"><img src="photos/3.jpg" alt="Reader Interaction"></div>
-                <div class="gallery-item"><img src="photos/4.jpg" alt="Book Showcase Delhi"></div>
-                <div class="gallery-item"><img src="photos/5.jpg" alt="World Book Fair Highlights"></div>
-                <div class="gallery-item"><img src="photos/6.jpg" alt="Author Discussion"></div>
-                <div class="gallery-item"><img src="photos/7.jpg" alt="Event Photo 7"></div>
-                <div class="gallery-item"><img src="photos/8.jpg" alt="Event Photo 8"></div>
-                <div class="gallery-item"><img src="photos/9.jpg" alt="Event Photo 9"></div>
-                <div class="gallery-item"><img src="photos/10.jpg" alt="Event Photo 10"></div>
-                <div class="gallery-item"><img src="photos/11.jpg" alt="Event Photo 11"></div>
-                <div class="gallery-item"><img src="photos/12.jpg" alt="Event Photo 12"></div>
+                <div class="gallery-item"><img src="photos/1.jpg" alt="Photo 1"></div>
+                <div class="gallery-item"><img src="photos/2.jpg" alt="Photo 2"></div>
+                <div class="gallery-item"><img src="photos/3.jpg" alt="Photo 3"></div>
+                <div class="gallery-item"><img src="photos/4.jpg" alt="Photo 4"></div>
+                <div class="gallery-item"><img src="photos/5.jpg" alt="Photo 5"></div>
+                <div class="gallery-item"><img src="photos/6.jpg" alt="Photo 6"></div>
+                <div class="gallery-item"><img src="photos/7.jpg" alt="Photo 7"></div>
+                <div class="gallery-item"><img src="photos/8.jpg" alt="Photo 8"></div>
+                <div class="gallery-item"><img src="photos/9.jpg" alt="Photo 9"></div>
+                <div class="gallery-item"><img src="photos/10.jpg" alt="Photo 10"></div>
+                <div class="gallery-item"><img src="photos/11.jpg" alt="Photo 11"></div>
+                <div class="gallery-item"><img src="photos/12.jpg" alt="Photo 12"></div>
             </div>
         </section>
     </main>
 
-    <div id="imageModal" class="modal">
+    <div id="imageModal" class="modal" style="display:none;">
         <span class="close">&times;</span>
         <img class="modal-content" id="fullImage">
     </div>
 
     <footer>
-        <p>&copy; 2026 Nitin Pareek. Built with care.</p>
+        <p style="text-align: center; padding: 40px; color: #888; font-size: 0.8rem;">&copy; 2026 Nitin Pareek. Built with care.</p>
     </footer>
 
     <script>
@@ -93,20 +81,17 @@
         const modalImg = document.getElementById("fullImage");
         const span = document.getElementsByClassName("close")[0];
 
-        // Handles opening the lightbox
         document.querySelectorAll('.gallery-item img').forEach(image => {
             image.onclick = function() {
-                modal.style.display = "block";
+                modal.style.display = "flex";
                 modalImg.src = this.src;
             }
         });
 
-        // Handles closing the lightbox
         span.onclick = function() { modal.style.display = "none"; }
         modal.onclick = function(event) {
             if (event.target !== modalImg) { modal.style.display = "none"; }
         }
     </script>
-
 </body>
 </html>
