@@ -235,11 +235,11 @@ h1, h2, h3, .logo, .nav-links, .btn-primary {
     font-weight: 700;
     font-size: 1.1rem;
     color: #1a202c;
-    margin: 40px 0 20px; /* Reduced margin */
+    margin: 40px 0 20px;
     display: flex;
     align-items: center;
-    justify-content: flex-start; /* Unified Left Alignment */
-    text-transform: none;
+    justify-content: flex-start;
+    text-transform: none; /* Forces Initial Caps */
     letter-spacing: 0.5px;
     text-align: left;
 }
@@ -255,25 +255,15 @@ h1, h2, h3, .logo, .nav-links, .btn-primary {
 }
 
 /* Status Tag & Categories (Small Bronze Text) */
-.category {
+.status-tag, .category {
     font-family: 'Montserrat', sans-serif;
     font-weight: 600;
     color: #b08d57;
-    text-transform: uppercase;
+    text-transform: none; /* Forces Initial Caps */
     font-size: 0.75rem;
-    letter-spacing: 1px;
+    letter-spacing: 0.5px;
     margin-bottom: 12px;
     display: block;
-}
-
-.status-tag {
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 600;
-    color: #b08d57;
-    text-transform: uppercase;
-    font-size: 0.7rem;
-    letter-spacing: 1px;
-    margin-bottom: 20px;
 }
 
 .bracket-text {
@@ -315,9 +305,9 @@ h1, h2, h3, .logo, .nav-links, .btn-primary {
 /* On the Horizon Block - Tightened Spacing */
 .horizon-block {
     background: #fdfaf5;
-    padding: 30px 40px; /* Reduced vertical padding from 40px to 30px */
+    padding: 30px 40px; 
     border-radius: 6px;
-    margin: 10px 0 60px; /* Removed top margin, kept bottom margin */
+    margin: 10px 0 60px;
     border-left: 4px solid #b08d57;
 }
 
@@ -387,6 +377,21 @@ h1, h2, h3, .logo, .nav-links, .btn-primary {
     .hero-image img { max-width: 250px; }
 }
 
+.connect-btn {
+    display: inline-flex;
+    align-items: center;
+    background: #0077b5;
+    color: #fff;
+    padding: 12px 25px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-family: 'Montserrat';
+    font-weight: 700;
+    font-size: 0.9rem;
+    transition: 0.3s;
+    width: 220px;
+    justify-content: center;
+}
 
 .credentials {
     font-family: 'Montserrat', sans-serif;
