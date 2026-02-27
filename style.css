@@ -630,3 +630,15 @@ h1, h2, h3 {
     font-weight: 400;
     color: #a0aec0;
 }
+
+/* Quick Connect Bar Mobile Fix */
+@media (max-width: 650px) {
+    .quick-connect-bar {
+        flex-direction: column;
+        text-align: center;
+        gap: 25px;
+    }
+    .form-scroll-window {
+        height: 500px; /* Slightly shorter for small screens */
+    }
+}
