@@ -296,3 +296,37 @@ h1, h2, h3, .logo, .nav-links, .btn-primary {
     .reviews-grid { grid-template-columns: 1fr; }
     .store-flex { gap: 20px; }
 }
+
+
+/* About Page Photo Wrap */
+.profile-photo {
+    width: 250px;
+    height: 250px;
+    object-fit: cover; /* Ensures it stays a perfect square */
+    float: left;
+    margin: 0 30px 20px 0; /* Space on the right and bottom */
+    border-radius: 4px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+.about-content p {
+    margin-bottom: 20px;
+    line-height: 1.8;
+    font-size: 1.1rem;
+    color: #444;
+}
+
+/* Mobile Fix for About Page */
+@media (max-width: 650px) {
+    .profile-photo {
+        float: none;
+        display: block;
+        margin: 0 auto 30px auto; /* Centers photo on mobile */
+        width: 100%;
+        max-width: 300px;
+        height: 300px;
+    }
+    .about-content p {
+        text-align: left;
+    }
+}
