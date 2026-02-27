@@ -456,3 +456,68 @@ section[style*="background: #fdfaf5"] .section-divider span {
     font-size: 0.85rem;
     letter-spacing: 0.5px;
 }
+
+
+/* Section Headings */
+.section-heading {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 1rem;
+    letter-spacing: 2px;
+    color: #1a202c;
+    margin: 60px 0 30px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.section-heading.left {
+    justify-content: flex-start;
+    text-align: left;
+}
+
+.bracket-text {
+    font-weight: 400;
+    color: #888;
+    font-size: 0.85rem;
+    margin-left: 10px;
+    text-transform: none;
+    letter-spacing: 0;
+}
+
+/* On the Horizon Block */
+.horizon-block {
+    background: #fdfaf5;
+    padding: 50px;
+    border-radius: 8px;
+    margin: 80px 0;
+    border-left: 5px solid #b08d57;
+}
+
+.horizon-text p {
+    margin-bottom: 20px;
+    line-height: 1.8;
+    color: #444;
+    font-size: 1.1rem;
+}
+
+.horizon-quote {
+    margin-top: 30px;
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: 1.2rem;
+    color: #1a202c;
+    border-top: 1px solid #e2e8f0;
+    padding-top: 20px;
+}
+
+/* Event Card Tweak */
+.event-card {
+    border: 1px solid #eee;
+    padding: 40px;
+    border-radius: 8px;
+    background: #fff;
+    transition: 0.3s;
+}
+.event-card:hover { border-color: #b08d57; }
