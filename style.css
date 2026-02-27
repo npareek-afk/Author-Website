@@ -169,55 +169,47 @@ h1, h2, h3, .logo, .nav-links, .btn-primary {
 }
 
 /* =========================================
-   5. GALLERY (CENTERED 3-COLUMN GRID)
+   5. GALLERY (FIXED SQUARE GRID - FACE PROTECTION)
    ========================================= */
 .gallery-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* 3 Columns */
-    gap: 15px; /* Spacing between photos */
-    margin: 0 auto;
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 12px; /* Uniform spacing */
+    max-width: 1000px;
+    margin: 40px auto;
 }
 
 .gallery-item {
-    aspect-ratio: 1 / 1; /* Forces square shape */
+    width: 100%;
+    aspect-ratio: 1 / 1; /* Forces a perfect square container */
     overflow: hidden;
-    background: #f0f0f0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    background: #f4f4f4;
     border-radius: 4px;
 }
 
 .gallery-item img {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Fills the square perfectly */
+    /* MAGIC FIX BELOW */
+    object-fit: cover; 
+    object-position: top; /* Ensures heads/faces aren't cut off */
     cursor: pointer;
-    transition: transform 0.5s ease, filter 0.3s ease;
-    filter: brightness(0.95);
+    transition: transform 0.4s ease;
 }
 
 .gallery-item img:hover {
-    transform: scale(1.08); /* Modern zoom effect */
-    filter: brightness(1);
+    transform: scale(1.05);
 }
 
-/* Responsive Gallery */
+/* Mobile Responsiveness */
 @media (max-width: 850px) {
-    .gallery-grid {
-        grid-template-columns: repeat(2, 1fr); /* 2 Columns on Tablets */
-    }
+    .gallery-grid { grid-template-columns: repeat(2, 1fr); }
 }
 
 @media (max-width: 500px) {
-    .gallery-grid {
-        grid-template-columns: 1fr; /* 1 Column on Phones */
-        gap: 20px;
-    }
-    .gallery-item {
-        height: 350px; /* Taller on mobile for better visibility */
-    }
+    .gallery-grid { grid-template-columns: 1fr; }
 }
+
 
 /* =========================================
    6. WRITINGS / ARTICLES
