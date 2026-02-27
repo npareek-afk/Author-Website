@@ -6,46 +6,69 @@
     <title>Connect | Nitin Pareek</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <script src="header.js" defer></script>
 </head>
 <body>
 
     <nav class="navbar">
         <div class="logo">NP</div>
-        <ul class="nav-links">
+        <div class="hamburger" id="hamburger">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+        <ul class="nav-links" id="nav-links">
             <li><a href="index.html">Home</a></li>
             <li><a href="about.html">About</a></li>
             <li><a href="works.html">Published Work</a></li>
-            <li><a href="upcoming.html">Upcoming</a></li>
+            <li><a href="writings.html">Writings</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
             <li><a href="connect.html">Connect</a></li>
         </ul>
     </nav>
 
     <main class="container">
-        <section class="about-section">
+        <section style="padding: 60px 0;">
             <h1 class="page-title">Connect</h1>
-            <p class="accent-text">Let’s start a conversation.</p>
+            <p class="accent-text" style="text-align: center; margin-bottom: 50px;">Let’s start a conversation.</p>
 
-            <div class="connect-grid">
+            <div class="connect-grid" style="display: grid; grid-template-columns: 1fr 1.5fr; gap: 60px; align-items: start;">
+                
                 <div class="contact-info">
-                    <h3>Get in Touch</h3>
-                    <p>For speaking engagements, collaborations, or questions about the <em>Journey Through AI Land</em> series, please reach out.</p>
+                    <h2 class="section-heading left" style="margin-top: 0;">
+                        <span><img src="https://img.icons8.com/ios-filled/24/b08d57/contact-contacts.png" style="vertical-align: middle; margin-right: 10px; width: 18px;"></span>
+                        Get in Touch
+                    </h2>
+                    <p style="margin-bottom: 30px; color: #555;">For speaking engagements, collaborations, or questions about the <em>Journey Through AI Land</em> series, please reach out.</p>
                     
-                    <ul class="contact-links">
-                        <li><strong>Email:</strong> <br><a href="mailto:author.nitinpareek@gmail.com">author.nitinpareek@gmail.com</a></li>
-                        <li><strong>LinkedIn:</strong> <br><a href="https://www.linkedin.com/in/nitin-pareek-1752321/" target="_blank">In/NitinPareek</a></li>
-                        <li><strong>Instagram:</strong> <br><a href="https://www.instagram.com/neat__in" target="_blank">@neat__in</a></li>
-                        <li><strong>Facebook:</strong> <br><a href="https://www.facebook.com/nitinkpareek" target="_blank">Nitin K Pareek</a></li>
+                    <ul style="list-style: none; padding: 0;">
+                        <li style="margin-bottom: 20px;">
+                            <strong style="font-family: 'Montserrat'; font-size: 0.8rem; color: #888; text-transform: uppercase;">Email</strong><br>
+                            <a href="mailto:author.nitinpareek@gmail.com" style="color: #b08d57; text-decoration: none; font-weight: 600;">author.nitinpareek@gmail.com</a>
+                        </li>
+                        <li style="margin-bottom: 20px;">
+                            <strong style="font-family: 'Montserrat'; font-size: 0.8rem; color: #888; text-transform: uppercase;">LinkedIn</strong><br>
+                            <a href="https://www.linkedin.com/in/nitin-pareek-1752321/" target="_blank" style="color: #333; text-decoration: none;">In/NitinPareek</a>
+                        </li>
+                        <li style="margin-bottom: 20px;">
+                            <strong style="font-family: 'Montserrat'; font-size: 0.8rem; color: #888; text-transform: uppercase;">Instagram</strong><br>
+                            <a href="https://www.instagram.com/neat__in" target="_blank" style="color: #333; text-decoration: none;">@neat__in</a>
+                        </li>
+                        <li style="margin-bottom: 20px;">
+                            <strong style="font-family: 'Montserrat'; font-size: 0.8rem; color: #888; text-transform: uppercase;">Facebook</strong><br>
+                            <a href="https://www.facebook.com/nitinkpareek" target="_blank" style="color: #333; text-decoration: none;">Nitin K Pareek</a>
+                        </li>
                     </ul>
 
-                    <div class="bio-quote" style="font-size: 1rem; margin-top: 30px; border-left-color: var(--accent-color);">
+                    <div style="margin-top: 40px; padding: 20px; background: #fdfaf5; border-left: 3px solid #b08d57; font-style: italic; color: #666; font-size: 0.95rem;">
                         "I personally read and respond to every thoughtful message."
                     </div>
                 </div>
 
                 <div class="contact-form-area">
-                    <div class="form-container">
+                    <div class="form-container" style="background: #fff; border: 1px solid #eee; border-radius: 8px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.05);">
                         <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfX4dRxT-X1qODySKMzoRj9K_BmD6zQ5PvyDM-oLnzv6oWiIg/viewform?embedded=true" 
-                                width="100%" height="950" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+                                width="100%" height="800" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
                     </div>
                 </div>
             </div>
@@ -53,7 +76,7 @@
     </main>
 
     <footer>
-        <p>&copy; 2026 Nitin Pareek. Built with care.</p>
+        <p style="text-align: center; padding: 40px; color: #888; font-size: 0.8rem;">&copy; 2026 Nitin Pareek. Built with care.</p>
     </footer>
 
 </body>
