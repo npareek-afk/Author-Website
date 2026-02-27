@@ -416,3 +416,43 @@ h1, h2, h3, .logo, .nav-links, .btn-primary {
     .reviews-grid { grid-template-columns: 1fr; }
     .review-box[style*="span 2"] { grid-column: span 1 !important; }
 }
+
+
+/* Writing Section Dividers */
+.section-divider {
+    text-align: center;
+    border-bottom: 1px solid #eee;
+    line-height: 0.1em;
+    margin: 40px 0 50px;
+    font-family: 'Montserrat';
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.section-divider span {
+    background: #fff;
+    padding: 0 20px;
+    color: #999;
+    font-size: 0.8rem;
+}
+
+/* Ensure Book Preview has a clean background */
+section[style*="background: #fdfaf5"] .section-divider span {
+    background: #fdfaf5;
+}
+
+/* Event Card responsiveness */
+@media (max-width: 768px) {
+    .event-card {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+.read-more {
+    color: #b08d57;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 0.85rem;
+    letter-spacing: 0.5px;
+}
