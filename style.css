@@ -578,6 +578,7 @@ h1, h2, h3 {
 .reviews-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; align-items: start;}
 .review-box p { font-style: italic; font-size: 0.95rem; line-height: 1.5; }
 
+/* Handles Book Page & Reviews */
 @media (max-width: 900px) {
     .book-hero { flex-direction: column; text-align: center; }
     /*.reviews-grid { grid-template-columns: repeat(2, 1fr); }*/
@@ -585,6 +586,22 @@ h1, h2, h3 {
     .review-box[style*="span 2"] { grid-column: span 1 !important; }
 }
 
+/* Handles Connect Page */
+@media (max-width: 850px) {
+    .connect-grid {
+        grid-template-columns: 1fr !important; 
+        gap: 40px !important;
+    }
+    .contact-info {
+        text-align: center;
+    }
+    .contact-info .section-heading.left {
+        justify-content: center;
+    }
+    .contact-info ul li {
+        margin-bottom: 25px;
+    }
+}
 
 /* =========================================
    8. FINAL TYPOGRAPHY OVERRIDES
