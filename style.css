@@ -330,3 +330,48 @@ h1, h2, h3, .logo, .nav-links, .btn-primary {
         text-align: left;
     }
 }
+
+/* Store Logos */
+.store-grid-flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+.store-grid-flex img { height: 24px; width: auto; opacity: 0.7; transition: 0.3s; }
+.store-grid-flex img:hover { opacity: 1; }
+.text-logo { font-weight: 700; color: #d32f2f; text-decoration: none; font-size: 1.1rem; }
+
+/* Flag Grid */
+.flag-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+    gap: 20px;
+    text-align: center;
+}
+.flag-item img { width: 30px; height: 20px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); border-radius: 2px; }
+.flag-item a { text-decoration: none; color: #666; font-size: 0.75rem; display: block; margin-top: 5px; font-family: 'Montserrat'; }
+
+/* Universal Button */
+.universal-btn {
+    display: inline-block;
+    padding: 12px 25px;
+    background: #1a202c;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 0.9rem;
+    border-radius: 4px;
+    text-transform: uppercase;
+}
+
+/* Review Box Expansion */
+.review-box h3 { font-size: 1rem; margin-bottom: 10px; color: #1a202c; }
+.reviews-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+
+@media (max-width: 900px) {
+    .book-hero { flex-direction: column; text-align: center; }
+    .reviews-grid { grid-template-columns: repeat(2, 1fr); }
+    .review-box[style*="span 2"] { grid-column: span 1 !important; }
+}
